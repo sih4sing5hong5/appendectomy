@@ -1,0 +1,35 @@
+安裝python3.4
+	https://www.python.org/downloads/
+	Windows
+		安裝時記得勾PATH
+	Linux, Mac
+		還需安裝pip
+		http://pip.readthedocs.org/en/latest/installing.html#install-pip
+
+安裝django
+	pip install django
+
+建立資料庫
+	cd appendectomy #工作目錄
+	python manage.py syncdb
+
+架服務
+	cd appendectomy #工作目錄
+	python manage.py runserver
+	
+工作環境eclipse
+	https://www.eclipse.org/downloads/
+	安裝pydev
+		eclipse->help->install new software->work with:填
+    		http://pydev.org/updates
+		全選，接下來一直下一步
+		可參考：http://pydev.org/download.html
+	抓專案下來
+		1.先fork專案
+			https://github.com/sih4sing5hong5/appendectomy
+			右上角有fork
+		2.網頁右下角有HTTPS clone URL
+			複製網址
+		3.eclipse引入
+			file->import->git->uri->貼上網址+下一步
+			
