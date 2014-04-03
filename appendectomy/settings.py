@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    '提議連署',
 )
 
 MIDDLEWARE_CLASSES = (

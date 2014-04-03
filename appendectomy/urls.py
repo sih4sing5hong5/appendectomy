@@ -5,8 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'appendectomy.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+	url(r'^', include('提議連署.網址')),
 
-    url(r'^admin/', include(admin.site.urls)),
+#     url(r'^admin/', include(admin.site.urls)),
 )
