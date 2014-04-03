@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block 標題 %}割闌尾計劃－提議{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+    {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static '提議連署/版面.css' %}" />
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="目錄">
+		</div>
+
+        <div id="內容">
+            {% block 內容 %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
