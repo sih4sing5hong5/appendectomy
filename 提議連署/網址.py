@@ -4,5 +4,5 @@ from 提議連署.介面 import 提議網頁
 
 
 urlpatterns = patterns('',
-	url(r'^.*$', 提議網頁, name='首頁'),
+	url(r'^.*$', 提議網頁.as_view(), name='首頁'),
 )
