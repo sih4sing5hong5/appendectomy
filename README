@@ -3,12 +3,14 @@
 	Windows
 		安裝時記得勾PATH
 	Linux, Mac
-		因為系統通常都會用到裝python2.7，所以以下指令可能要用python3來執行
+		因為系統通常都會用到裝python2.7，所以以下指令可能要用python3(pip3)來執行
 		還需安裝pip
 			http://pip.readthedocs.org/en/latest/installing.html#install-pip
 
 安裝django
 	pip install django
+	pip install qrcode
+	pip install Pillow
 
 建立資料庫
 	cd appendectomy #工作目錄

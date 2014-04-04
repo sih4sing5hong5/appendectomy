@@ -11,6 +11,8 @@ from django.views import generic
 from 提議連署.模型 import 提議
 import urllib
 from django.views.generic.base import View
+import qrcode
+import io
 
 def 全部提議資料(request):
 	全部資料 = 提議.objects.order_by('流水號')[:10]
@@ -74,3 +76,14 @@ class 提議網頁(View):
 class 連署網頁(提議網頁):
 	版 = loader.get_template('提議連署/連署.html')
 	網址 = 'http://www.uisltsc.com.tw/appendectomy/petition.php'
+
+def QRCode(request, 資料):
+	png圖片 = qrcode.make(資料)
+# 	目標=io.BytesIO()
+# 	png圖片.save(目標)
+	回應 = HttpResponse()
+# 	回應.write(目標.getbuffer())
+	png圖片.save(回應)
+	回應['Content-Type'] = 'image/png'
+# 	回應['Content-Length'] = len(目標.getbuffer())
+	return 回應
