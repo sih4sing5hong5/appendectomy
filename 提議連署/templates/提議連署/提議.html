@@ -1,7 +1,7 @@
 {% extends "提議連署/框.html" %}
 
 {% block 內容 %}
-	<form action='http://www.uisltsc.com.tw/appendectomy/proposal.php' method='post'>{% csrf_token %}
+	<form action='' method='post'>{% csrf_token %}
 	負責人email：
 	<input type="text" name='email'></input>
 	第一位提議人：
@@ -12,6 +12,8 @@
 	<input type="text" name='Occupation_0'></input>
 	<input type="text" name='RegAdd_0'></input>
 	<input type="text" name='QRImgPath_0'></input>
-	<input type="submit"/>
+	{% for 選擇 in 方式 %}
+		<input type="submit" name='送出' value='{{ 選擇 }}'/>
+	{% endfor %}
 	</form>
 {% endblock %}
