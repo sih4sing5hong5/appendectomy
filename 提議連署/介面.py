@@ -38,6 +38,7 @@ class 提議網頁(View):
 		del 參數['email']
 		del 參數['csrfmiddlewaretoken']
 		pdf資料 = self.掠pdf(參數)
+		print('len=',len(pdf資料),pdf資料)
 		if request.POST['送出'] == self.下載pdf:
 			回應 = HttpResponse()
 			回應.write(pdf資料)
@@ -65,10 +66,10 @@ class 提議網頁(View):
 		QRCode 影像：QRImgPath_[序號]
 		SNo 流水號：SNo_[序號] <=new 2014.04.04 pm 01:02 added
 		'''
-		參數 = {'Name_0' : 'www', 'IDNo_0' : '123456',
-			'Sex_0' : 'www', 'Birthday_0' : '123456',
-			'Occupation_0' : 'www', 'RegAdd_0' : '123456',
-			'QRImgPath_0' : 'www','SNo_0':'123' ,'Size':'1'}
+# 		參數 = {'Name_0' : 'www', 'IDNo_0' : '123456',
+# 			'Sex_0' : 'www', 'Birthday_0' : '123456',
+# 			'Occupation_0' : 'www', 'RegAdd_0' : '123456',
+# 			'QRImgPath_0' : 'www','SNo_0':'123' ,'Size':'1'}
 # 		print(urllib.parse.urlencode(參數))
 		print(dict(參數))
 		連線 = urllib.request.urlopen(
