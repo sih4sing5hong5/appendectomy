@@ -5,6 +5,6 @@ from 提議連署.介面 import QRCode
 
 
 urlpatterns = patterns('',
-	url(r'^QRCode/(?P<資料>.*)$', QRCode, name='QRCode'),
+	url(r'^QRCode/(?P<data>.*)$', QRCode, name='QRCode'),
 	url(r'^.*$', 提議網頁.as_view(), name='首頁'),
 )

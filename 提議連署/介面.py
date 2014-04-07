@@ -84,8 +84,8 @@ class 連署網頁(提議網頁):
 	版 = loader.get_template('提議連署/連署.html')
 	網址 = 'http://www.uisltsc.com.tw/appendectomy/petition.php'
 
-def QRCode(request, 資料):
-	png圖片 = qrcode.make(資料)
+def QRCode(request, data):
+	png圖片 = qrcode.make(data)
 # 	目標=io.BytesIO()
 # 	png圖片.save(目標)
 	回應 = HttpResponse()
