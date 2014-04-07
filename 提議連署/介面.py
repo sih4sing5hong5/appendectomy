@@ -91,6 +91,6 @@ def QRCode(request, 資料):
 	回應 = HttpResponse()
 # 	回應.write(目標.getbuffer())	
 	png圖片.save(回應 , "JPEG")
-	回應['Content-Type'] = 'image/JPEG'
+	回應['Content-Type'] = 'image/PNG'
 # 	回應['Content-Length'] = len(目標.getbuffer())
 	return 回應
