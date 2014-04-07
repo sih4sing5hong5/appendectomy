@@ -19,6 +19,12 @@
 架服務
 	cd appendectomy #工作目錄
 	python manage.py runserver
+
+Q&A	
+	encoder jpeg not available
+		Ubuntu:
+			sudo apt-get install libjpeg-dev
+			pip install -I Pillow
 	
 工作環境eclipse
 	https://www.eclipse.org/downloads/
